@@ -48,18 +48,33 @@ class User implements UserInterface
      * @var null|string Link to Personal Website
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $homepage = "";
+    private $homepage = '';
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Linkedin;
+
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
+    /**
+     * @param string $email
+     * @return User
+     */
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -89,6 +104,10 @@ class User implements UserInterface
         return array_unique($roles);
     }
 
+    /**
+     * @param array $roles
+     * @return User
+     */
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
@@ -130,6 +149,10 @@ class User implements UserInterface
         return (string)$this->password;
     }
 
+    /**
+     * @param string $password
+     * @return User
+     */
     public function setPassword(string $password): self
     {
         $this->password = $password;
@@ -186,6 +209,25 @@ class User implements UserInterface
     public function setHomepage(?string $homepage): self
     {
         $this->homepage = $homepage;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getLinkedin(): ?string
+    {
+        return $this->Linkedin;
+    }
+
+    /**
+     * @param string|null $Linkedin
+     * @return User
+     */
+    public function setLinkedin(?string $Linkedin): self
+    {
+        $this->Linkedin = $Linkedin;
 
         return $this;
     }
