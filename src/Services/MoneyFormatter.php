@@ -3,7 +3,6 @@
 
 namespace App\Services;
 
-
 /**
  * Class MoneyFormatter
  *
@@ -30,18 +29,17 @@ class MoneyFormatter
      * @param float $number
      * @return string
      */
-    public function formatEur(float $number)
+    public function formatEur($number): string
     {
-        return $this->numberFormatter->changeFormat($number).' €';
+        return $this->formatter->changeFormat($number).' €';
     }
 
     /**
      * @param float $number
      * @return string
      */
-    public function formatUsd(float $number)
+    public function formatUsd($number): string
     {
-        return '$' . $this->numberFormatter->changeFormat($number);
+        return '$' . $this->formatter->changeFormat($number);
     }
 }
-

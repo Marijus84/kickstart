@@ -54,7 +54,7 @@ class NumberFormatterTest extends TestCase
     /**
      * @dataProvider providerNumbers
      * @param string $originNumber
-     * @param string $formatedNumber
+     * @param string $formattedNumber
      */
     public function testFormatting($originNumber, $formattedNumber) :void
     {
