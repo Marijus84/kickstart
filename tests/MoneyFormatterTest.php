@@ -4,7 +4,9 @@ namespace App\Tests;
 
 use App\Services\MoneyFormatter;
 use App\Services\NumberFormatterInterface;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use ReflectionException;
 
 /**
  * Class MoneyFormatterTest
@@ -52,7 +54,7 @@ class MoneyFormatterTest extends TestCase
      * @param string $originNumber
      * @param $formattedNumber
      * @param string $expectedResult
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function testFormattingEUR($originNumber, $formattedNumber, $expectedResult) :void
     {
@@ -68,7 +70,7 @@ class MoneyFormatterTest extends TestCase
      * @param string $originNumber
      * @param $formattedNumber
      * @param string $expectedResult
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function testFormattingUSD($originNumber, $formattedNumber, $expectedResult) :void
     {
@@ -80,8 +82,8 @@ class MoneyFormatterTest extends TestCase
 
     /**
      * @param $formattedNumber
-     * @return NumberFormatterInterface|\PHPUnit\Framework\MockObject\MockObject
-     * @throws \ReflectionException
+     * @return NumberFormatterInterface|MockObject
+     * @throws ReflectionException
      */
     public function mockCreate($formattedNumber)
     {
