@@ -56,9 +56,9 @@ class NumberFormatterTest extends TestCase
      * @param string $originNumber
      * @param string $formatedNumber
      */
-    public function testFormatting($originNumber, $formatedNumber) :void
+    public function testFormatting($originNumber, $formattedNumber) :void
     {
         $format = new NumberFormatter();
-        $this->assertEquals($formatedNumber, $format->changeFormat($originNumber));
+        $this->assertEquals($formattedNumber, $format->changeFormat($originNumber));
     }
 }
