@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests;
+namespace App\Services\Tests;
 
 use App\Services\NumberFormatter;
 use PHPUnit\Framework\TestCase;

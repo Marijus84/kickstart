@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests;
+namespace App\Services\Tests;
 
 use App\Services\MoneyFormatter;
 use App\Services\NumberFormatterInterface;
