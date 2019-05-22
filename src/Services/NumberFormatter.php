@@ -25,9 +25,9 @@ class NumberFormatter implements NumberFormatterInterface
                 $fraction  = $absValue - (int) $absValue;
 
                 if ($fraction !=0) {
-                    $formattedValue = number_format($value, 2, '.', ' ');
+                    $formattedValue = number_format($value, 2);
                 } else {
-                    $formattedValue = number_format($value, 0, '', ' ');
+                    $formattedValue = number_format($value);
                 }
                 break;
         }
