@@ -85,7 +85,7 @@ class MoneyFormatterTest extends TestCase
      * @return NumberFormatterInterface|MockObject
      * @throws ReflectionException
      */
-    public function mockCreate($formattedNumber)
+    private function mockCreate($formattedNumber)
     {
 
         $mockFormat = $this->createMock(NumberFormatterInterface::class);
