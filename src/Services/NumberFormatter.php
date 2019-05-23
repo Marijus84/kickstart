@@ -8,7 +8,7 @@ class NumberFormatter implements NumberFormatterInterface
     {
         $absValue = abs(round($value, 2));
 
-        switch ($absValue) {
+        switch (true) {
             case ($absValue >= 999500):
                 $formattedValue = number_format($value / 1000000, 2, '.', ' ') . 'M';
                 break;
