@@ -20,3 +20,4 @@ matrix:
         - yarn
       script:
         - yarn test
+        #test Travis CI
